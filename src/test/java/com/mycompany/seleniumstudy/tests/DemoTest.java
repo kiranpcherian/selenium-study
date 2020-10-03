@@ -30,6 +30,7 @@ public class DemoTest {
         WebDriver driver = new ChromeDriver();
         driver.get(baseUrl);
         WebElement txtSearch = driver.findElement(By.name("search_field"));
+        txtSearch.clear();
         txtSearch.sendKeys("table");
         WebElement btnSearch = driver.findElement(By.xpath("//*[@id=\"search\"]/form/div/span/input"));
         btnSearch.click();
